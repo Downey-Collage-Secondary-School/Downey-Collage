@@ -1,303 +1,2116 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta name="google-site-verification" content="umgO6585SzaQnbPOUT_dHtdxe1QAa_gnzi6QMgI4KXo" />
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Downey Collage Secondary School</title>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet">
-  <style>
-  :root {
-    --bg: #08090a;
-    --bg1: #0d0e10;
-    --bg2: #111316;
-    --bg3: #171a1e;
-    --border: rgba(255,255,255,0.07);
-    --border2: rgba(255,255,255,0.12);
-    --text: #e8e6e0;
-    --muted: #6b6966;
-    --muted2: #9e9b97;
-    --accent: #4f7cff;
-    --accent2: #7aa2ff;
-    --gold: #c9a84c;
-    --gold2: #e8c97b;
-    --green: #3ecf8e;
-    --red: #e5534b;
-    --serif: 'DM Serif Display', serif;
-    --sans: 'DM Sans', sans-serif;
-  }
+<meta name="google-site-verification" content="umgO6585SzaQnbPOUT_dHtdxe1QAa_gnzi6QMgI4KXo" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Downey Collage Secondary School</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #08090a;
+  --bg1: #0d0e10;
+  --bg2: #111316;
+  --bg3: #171a1e;
+  --border: rgba(255,255,255,0.07);
+  --border2: rgba(255,255,255,0.12);
+  --text: #e8e6e0;
+  --muted: #6b6966;
+  --muted2: #9e9b97;
+  --accent: #4f7cff;
+  --accent2: #7aa2ff;
+  --gold: #c9a84c;
+  --gold2: #e8c97b;
+  --green: #3ecf8e;
+  --red: #e5534b;
+  --serif: 'DM Serif Display', serif;
+  --sans: 'DM Sans', sans-serif;
+}
 
-  /* ── LIGHT MODE ── */
-  html.light {
-    --bg: #f5f4f0;
-    --bg1: #eeecea;
-    --bg2: #e6e4e0;
-    --bg3: #dddbd6;
-    --border: rgba(0,0,0,0.08);
-    --border2: rgba(0,0,0,0.14);
-    --text: #1a1917;
-    --muted: #8a8784;
-    --muted2: #5c5a57;
-    --accent: #2a5ce6;
-    --accent2: #1e4cc9;
-    --gold: #a07828;
-    --gold2: #7a5a18;
-    --green: #1e9e6a;
-    --red: #c0392b;
-  }
+/* ── LIGHT MODE ── */
+html.light {
+  --bg: #f5f4f0;
+  --bg1: #eeecea;
+  --bg2: #e6e4e0;
+  --bg3: #dddbd6;
+  --border: rgba(0,0,0,0.08);
+  --border2: rgba(0,0,0,0.14);
+  --text: #1a1917;
+  --muted: #8a8784;
+  --muted2: #5c5a57;
+  --accent: #2a5ce6;
+  --accent2: #1e4cc9;
+  --gold: #a07828;
+  --gold2: #7a5a18;
+  --green: #1e9e6a;
+  --red: #c0392b;
+}
 
-  /* Smooth theme transition — background, border, color only (not transform/opacity used by animations) */
-  body, nav, section, div, span, p, h1, h2, h3, h4, a, button, input, textarea, select, footer, ul, li {
-    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
-  }
+/* Smooth theme transition — background, border, color only (not transform/opacity used by animations) */
+body, nav, section, div, span, p, h1, h2, h3, h4, a, button, input, textarea, select, footer, ul, li {
+  transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
 
-  /* ── LIGHT MODE SPECIFIC OVERRIDES ── */
-  html.light body::before { opacity: 0.15; }
-  html.light .grid-lines {
-    background-image:
-      linear-gradient(to right, rgba(0,0,0,0.04) 1px, transparent 1px),
-      linear-gradient(to bottom, rgba(0,0,0,0.04) 1px, transparent 1px);
-  }
-  html.light nav {
-    background: rgba(245,244,240,0.88) !important;
-    border-bottom-color: rgba(0,0,0,0.1);
-  }
-  html.light .hero-glow {
-    background: radial-gradient(circle, rgba(42,92,230,0.1) 0%, transparent 70%);
-  }
-  html.light .hero-glow2 {
-    background: radial-gradient(circle, rgba(160,120,40,0.08) 0%, transparent 70%);
-  }
-  html.light .cta-glow {
-    background: radial-gradient(ellipse, rgba(42,92,230,0.08) 0%, transparent 70%);
-  }
-  html.light ::-webkit-scrollbar-track { background: var(--bg); }
-  html.light ::-webkit-scrollbar-thumb { background: rgba(0,0,0,0.2); }
-  html.light .btn-primary { background: var(--accent); }
-  html.light .btn-primary:hover { background: #1e4cc9; box-shadow: 0 8px 24px rgba(42,92,230,0.25); }
-  html.light .form-input, html.light .form-select { color: var(--text); }
-  html.light .map-dot { background: var(--accent); box-shadow: 0 0 0 6px rgba(42,92,230,0.18), 0 0 0 12px rgba(42,92,230,0.08); }
-  html.light .prog-fill { background: linear-gradient(90deg, var(--accent), var(--gold)); }
-  html.light .announcement-bar { background: linear-gradient(90deg, rgba(42,92,230,0.1), rgba(160,120,40,0.07)); border-bottom-color: rgba(42,92,230,0.2); }
+/* ── LIGHT MODE SPECIFIC OVERRIDES ── */
+html.light body::before { opacity: 0.15; }
+html.light .grid-lines {
+  background-image:
+    linear-gradient(to right, rgba(0,0,0,0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0,0,0,0.04) 1px, transparent 1px);
+}
+html.light nav {
+  background: rgba(245,244,240,0.88) !important;
+  border-bottom-color: rgba(0,0,0,0.1);
+}
+html.light .hero-glow {
+  background: radial-gradient(circle, rgba(42,92,230,0.1) 0%, transparent 70%);
+}
+html.light .hero-glow2 {
+  background: radial-gradient(circle, rgba(160,120,40,0.08) 0%, transparent 70%);
+}
+html.light .cta-glow {
+  background: radial-gradient(ellipse, rgba(42,92,230,0.08) 0%, transparent 70%);
+}
+html.light ::-webkit-scrollbar-track { background: var(--bg); }
+html.light ::-webkit-scrollbar-thumb { background: rgba(0,0,0,0.2); }
+html.light .btn-primary { background: var(--accent); }
+html.light .btn-primary:hover { background: #1e4cc9; box-shadow: 0 8px 24px rgba(42,92,230,0.25); }
+html.light .form-input, html.light .form-select { color: var(--text); }
+html.light .map-dot { background: var(--accent); box-shadow: 0 0 0 6px rgba(42,92,230,0.18), 0 0 0 12px rgba(42,92,230,0.08); }
+html.light .prog-fill { background: linear-gradient(90deg, var(--accent), var(--gold)); }
+html.light .announcement-bar { background: linear-gradient(90deg, rgba(42,92,230,0.1), rgba(160,120,40,0.07)); border-bottom-color: rgba(42,92,230,0.2); }
 
-  /* ── THEME TOGGLE BUTTON ── */
-  .theme-toggle {
-    width: 36px;
-    height: 36px;
-    border-radius: 8px;
-    border: 1px solid var(--border2);
-    background: var(--bg2);
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 16px;
-    flex-shrink: 0;
-    position: relative;
-    overflow: hidden;
-    color: var(--muted2);
-  }
-  .theme-toggle:hover { border-color: var(--border2); background: var(--bg3); }
-  .theme-toggle .icon-sun,
-  .theme-toggle .icon-moon {
-    position: absolute;
-    transition: transform 0.4s cubic-bezier(0.34,1.56,0.64,1), opacity 0.3s ease;
-    line-height: 1;
-  }
-  .theme-toggle .icon-sun  { transform: translateY(0) rotate(0deg); opacity: 1; }
-  .theme-toggle .icon-moon { transform: translateY(24px) rotate(-90deg); opacity: 0; }
-  html.light .theme-toggle .icon-sun  { transform: translateY(-24px) rotate(90deg); opacity: 0; }
-  html.light .theme-toggle .icon-moon { transform: translateY(0) rotate(0deg); opacity: 1; }
+/* ── THEME TOGGLE BUTTON ── */
+.theme-toggle {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  border: 1px solid var(--border2);
+  background: var(--bg2);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  flex-shrink: 0;
+  position: relative;
+  overflow: hidden;
+  color: var(--muted2);
+}
+.theme-toggle:hover { border-color: var(--border2); background: var(--bg3); }
+.theme-toggle .icon-sun,
+.theme-toggle .icon-moon {
+  position: absolute;
+  transition: transform 0.4s cubic-bezier(0.34,1.56,0.64,1), opacity 0.3s ease;
+  line-height: 1;
+}
+.theme-toggle .icon-sun  { transform: translateY(0) rotate(0deg); opacity: 1; }
+.theme-toggle .icon-moon { transform: translateY(24px) rotate(-90deg); opacity: 0; }
+html.light .theme-toggle .icon-sun  { transform: translateY(-24px) rotate(90deg); opacity: 0; }
+html.light .theme-toggle .icon-moon { transform: translateY(0) rotate(0deg); opacity: 1; }
 
-  *,*::before,*::after { box-sizing:border-box; margin:0; padding:0; }
+*,*::before,*::after { box-sizing:border-box; margin:0; padding:0; }
 
-  html { scroll-behavior: smooth; font-size: 16px; }
+html { scroll-behavior: smooth; font-size: 16px; }
 
-  body {
-    background: var(--bg);
-    color: var(--text);
-    font-family: var(--sans);
-    font-weight: 300;
-    line-height: 1.6;
-    overflow-x: hidden;
-  }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--sans);
+  font-weight: 300;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
 
-  /* ── Scrollbar ── */
-  ::-webkit-scrollbar { width:5px; }
-  ::-webkit-scrollbar-track { background: var(--bg); }
-  ::-webkit-scrollbar-thumb { background: var(--border2); border-radius:99px; }
+/* ── Scrollbar ── */
+::-webkit-scrollbar { width:5px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--border2); border-radius:99px; }
 
-  /* ── NOISE OVERLAY ── */
-  body::before {
-    content:'';
-    position:fixed;
-    inset:0;
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");
-    pointer-events:none;
-    z-index:1000;
-    opacity:0.4;
-  }
+/* ── NOISE OVERLAY ── */
+body::before {
+  content:'';
+  position:fixed;
+  inset:0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");
+  pointer-events:none;
+  z-index:1000;
+  opacity:0.4;
+}
 
-  /* ── GRID LINES ── */
-  .grid-lines {
-    position:fixed;
-    inset:0;
-    pointer-events:none;
-    z-index:0;
-    background-image:
-      linear-gradient(to right, rgba(255,255,255,0.02) 1px, transparent 1px),
-      linear-gradient(to bottom, rgba(255,255,255,0.02) 1px, transparent 1px);
-    background-size: 80px 80px;
-  }
+/* ── GRID LINES ── */
+.grid-lines {
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  z-index:0;
+  background-image:
+    linear-gradient(to right, rgba(255,255,255,0.02) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255,255,255,0.02) 1px, transparent 1px);
+  background-size: 80px 80px;
+}
 
-  /* ── NAV ── */
-  nav {
-    position:fixed;
-    top:0;
-    left:0;
-    right:0;
-    z-index:900;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    padding:0 40px;
-    height:60px;
-    background: rgba(8,9,10,0.85);
-    backdrop-filter: blur(20px) saturate(1.2);
-    border-bottom: 1px solid var(--border);
-    transition: background 0.3s;
-  }
+/* ── NAV ── */
+nav {
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  z-index:900;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:0 40px;
+  height:60px;
+  background: rgba(8,9,10,0.85);
+  backdrop-filter: blur(20px) saturate(1.2);
+  border-bottom: 1px solid var(--border);
+  transition: background 0.3s;
+}
 
-  .nav-logo {
-    display:flex;
-    align-items:center;
-    gap:10px;
-    text-decoration:none;
-  }
+.nav-logo {
+  display:flex;
+  align-items:center;
+  gap:10px;
+  text-decoration:none;
+}
 
-  .logo-mark {
-    width:30px;
-    height:30px;
-    background: linear-gradient(135deg, var(--accent), var(--gold));
-    border-radius:7px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-family: var(--serif);
-    font-size:16px;
-    color:white;
-    font-weight:400;
-    flex-shrink:0;
-  }
+.logo-mark {
+  width:30px;
+  height:30px;
+  background: linear-gradient(135deg, var(--accent), var(--gold));
+  border-radius:7px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-family: var(--serif);
+  font-size:16px;
+  color:white;
+  font-weight:400;
+  flex-shrink:0;
+}
 
-  .logo-text {
-    font-size:13px;
-    font-weight:500;
-    color:var(--text);
-    letter-spacing:0.02em;
-    line-height:1.2;
-  }
-  .logo-text span { display:block; color:var(--muted2); font-weight:300; font-size:11px; }
+.logo-text {
+  font-size:13px;
+  font-weight:500;
+  color:var(--text);
+  letter-spacing:0.02em;
+  line-height:1.2;
+}
+.logo-text span { display:block; color:var(--muted2); font-weight:300; font-size:11px; }
 
-  .nav-links {
-    display:flex;
-    align-items:center;
-    gap:2px;
-    list-style:none;
-  }
-  .nav-links a {
-    display:block;
-    padding:6px 12px;
-    font-size:13px;
-    color:var(--muted2);
-    text-decoration:none;
-    border-radius:6px;
-    transition:color 0.2s, background 0.2s;
-    letter-spacing:0.01em;
-  }
-  .nav-links a:hover { color:var(--text); background: rgba(255,255,255,0.05); }
+.nav-links {
+  display:flex;
+  align-items:center;
+  gap:2px;
+  list-style:none;
+}
+.nav-links a {
+  display:block;
+  padding:6px 12px;
+  font-size:13px;
+  color:var(--muted2);
+  text-decoration:none;
+  border-radius:6px;
+  transition:color 0.2s, background 0.2s;
+  letter-spacing:0.01em;
+}
+.nav-links a:hover { color:var(--text); background: rgba(255,255,255,0.05); }
 
-  .nav-cta {
-    display:flex;
-    align-items:center;
-    gap:10px;
-  }
-  .btn {
-    display:inline-flex;
-    align-items:center;
-    gap:6px;
-    padding:7px 16px;
-    border-radius:7px;
-    font-size:13px;
-    font-family:var(--sans);
-    font-weight:500;
-    cursor:pointer;
-    text-decoration:none;
-    transition:all 0.2s;
-    letter-spacing:0.01em;
-    border:none;
-  }
-  .btn-ghost {
-    background:transparent;
-    color:var(--muted2);
-    border:1px solid var(--border2);
-  }
-  .btn-ghost:hover { color:var(--text); border-color:rgba(255,255,255,0.25); background:rgba(255,255,255,0.04); }
-  .btn-primary {
-    background: var(--accent);
-    color:white;
-  }
-  .btn-primary:hover { background:#6088ff; transform:translateY(-1px); box-shadow:0 8px 24px rgba(79,124,255,0.3); }
-  .btn-gold {
-    background: linear-gradient(135deg, var(--gold), #a87c30);
-    color:white;
-  }
-  .btn-gold:hover { transform:translateY(-1px); box-shadow:0 8px 24px rgba(201,168,76,0.3); }
+.nav-cta {
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+.btn {
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  padding:7px 16px;
+  border-radius:7px;
+  font-size:13px;
+  font-family:var(--sans);
+  font-weight:500;
+  cursor:pointer;
+  text-decoration:none;
+  transition:all 0.2s;
+  letter-spacing:0.01em;
+  border:none;
+}
+.btn-ghost {
+  background:transparent;
+  color:var(--muted2);
+  border:1px solid var(--border2);
+}
+.btn-ghost:hover { color:var(--text); border-color:rgba(255,255,255,0.25); background:rgba(255,255,255,0.04); }
+.btn-primary {
+  background: var(--accent);
+  color:white;
+}
+.btn-primary:hover { background:#6088ff; transform:translateY(-1px); box-shadow:0 8px 24px rgba(79,124,255,0.3); }
+.btn-gold {
+  background: linear-gradient(135deg, var(--gold), #a87c30);
+  color:white;
+}
+.btn-gold:hover { transform:translateY(-1px); box-shadow:0 8px 24px rgba(201,168,76,0.3); }
 
-  /* ── SECTIONS ── */
-  section { position:relative; }
-  .container { max-width:1100px; margin:0 auto; padding:0 40px; }
+/* ── SECTIONS ── */
+section { position:relative; }
+.container { max-width:1100px; margin:0 auto; padding:0 40px; }
 
-  /* ── HERO ── */
-  #hero {
-    min-height: 100vh;
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    justify-content:center;
-    text-align:center;
-    padding:120px 40px 80px;
-    position:relative;
-    overflow:hidden;
-  }
+/* ── HERO ── */
+#hero {
+  min-height: 100vh;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:120px 40px 80px;
+  position:relative;
+  overflow:hidden;
+}
 
-  .hero-glow {
-    position:absolute;
-    width:700px;
-    height:700px;
-    border-radius:50%;
-    background: radial-gradient(circle, rgba(79,124,255,0.12) 0%, transparent 70%);
-    top:50%;
-    left:50%;
-    transform:translate(-50%,-50%);
-    pointer-events:none;
-    animation: pulse-glow 6s ease-in-out infinite;
-  }
-  .hero-glow2 {
-    position:absolute;
-    width:400px;
-    height:400px;
-    border-radius:50%;
-    background: radial-gradient(circle, rgba(201,168,76,0.07) 0%, transparent 70%);
-    top:30%;
-    right:15%;
-    pointer-events:none;
-    animation: pulse-glow 6s ease-in-out infinite;
-  }
-  </style>
+.hero-glow {
+  position:absolute;
+  width:700px;
+  height:700px;
+  border-radius:50%;
+  background: radial-gradient(circle, rgba(79,124,255,0.12) 0%, transparent 70%);
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  pointer-events:none;
+  animation: pulse-glow 6s ease-in-out infinite;
+}
+.hero-glow2 {
+  position:absolute;
+  width:400px;
+  height:400px;
+  border-radius:50%;
+  background: radial-gradient(circle, rgba(201,168,76,0.07) 0%, transparent 70%);
+  top:30%;
+  right:15%;
+  pointer-events:none;
+  animation: pulse-glow 8s ease-in-out infinite 2s;
+}
+
+@keyframes pulse-glow {
+  0%,100% { opacity:1; transform:translate(-50%,-50%) scale(1); }
+  50% { opacity:0.6; transform:translate(-50%,-50%) scale(1.1); }
+}
+
+.hero-badge {
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  padding:5px 14px;
+  border:1px solid var(--border2);
+  border-radius:99px;
+  font-size:12px;
+  color:var(--muted2);
+  margin-bottom:32px;
+  background: var(--bg2);
+  opacity:0;
+  animation: fade-up 0.8s ease forwards 0.2s;
+}
+.hero-badge-dot { width:6px; height:6px; border-radius:50%; background:var(--green); animation: blink 2s ease-in-out infinite; }
+@keyframes blink { 0%,100%{opacity:1} 50%{opacity:0.3} }
+
+.hero-eyebrow {
+  font-size:11px;
+  font-weight:500;
+  letter-spacing:0.2em;
+  text-transform:uppercase;
+  color:var(--gold);
+  margin-bottom:16px;
+  opacity:0;
+  animation: fade-up 0.8s ease forwards 0.3s;
+}
+
+h1.hero-title {
+  font-family: var(--serif);
+  font-size: clamp(40px, 6vw, 80px);
+  font-weight:400;
+  line-height:1.08;
+  letter-spacing:-0.02em;
+  color:var(--text);
+  max-width:820px;
+  margin-bottom:24px;
+  opacity:0;
+  animation: fade-up 0.8s ease forwards 0.4s;
+}
+h1.hero-title em { font-style:italic; color:var(--accent2); }
+h1.hero-title .gold-text { color:var(--gold2); }
+
+.hero-sub {
+  font-size:17px;
+  color:var(--muted2);
+  max-width:520px;
+  margin-bottom:48px;
+  line-height:1.65;
+  opacity:0;
+  animation: fade-up 0.8s ease forwards 0.5s;
+}
+
+.hero-actions {
+  display:flex;
+  align-items:center;
+  gap:12px;
+  flex-wrap:wrap;
+  justify-content:center;
+  opacity:0;
+  animation: fade-up 0.8s ease forwards 0.6s;
+}
+
+.hero-stats {
+  display:flex;
+  align-items:center;
+  gap:48px;
+  margin-top:80px;
+  padding-top:48px;
+  border-top:1px solid var(--border);
+  opacity:0;
+  animation: fade-up 0.8s ease forwards 0.8s;
+}
+.stat { text-align:center; }
+.stat-num {
+  font-family:var(--serif);
+  font-size:36px;
+  color:var(--text);
+  line-height:1;
+  margin-bottom:4px;
+}
+.stat-num sup { font-size:20px; color:var(--accent2); font-family:var(--sans); }
+.stat-label { font-size:12px; color:var(--muted); text-transform:uppercase; letter-spacing:0.12em; }
+
+@keyframes fade-up {
+  from { opacity:0; transform:translateY(20px); }
+  to { opacity:1; transform:translateY(0); }
+}
+
+/* Scroll indicator */
+.scroll-indicator {
+  position:absolute;
+  bottom:32px;
+  left:50%;
+  transform:translateX(-50%);
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:6px;
+  opacity:0;
+  animation: fade-up 0.8s ease forwards 1.2s;
+}
+.scroll-line {
+  width:1px;
+  height:40px;
+  background:linear-gradient(to bottom, var(--border2), transparent);
+  animation: scroll-pulse 2s ease-in-out infinite;
+}
+@keyframes scroll-pulse {
+  0%,100%{transform:scaleY(1);opacity:1}
+  50%{transform:scaleY(0.5);opacity:0.3}
+}
+
+/* ── SECTION HEADERS ── */
+.section-tag {
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  font-size:11px;
+  font-weight:500;
+  letter-spacing:0.15em;
+  text-transform:uppercase;
+  color:var(--muted);
+  margin-bottom:16px;
+}
+.section-tag::before {
+  content:'';
+  display:block;
+  width:16px;
+  height:1px;
+  background:var(--muted);
+}
+
+.section-title {
+  font-family:var(--serif);
+  font-size:clamp(28px, 4vw, 48px);
+  font-weight:400;
+  line-height:1.12;
+  letter-spacing:-0.02em;
+  color:var(--text);
+  margin-bottom:16px;
+}
+.section-title em { font-style:italic; color:var(--accent2); }
+
+.section-desc {
+  font-size:16px;
+  color:var(--muted2);
+  max-width:540px;
+  line-height:1.65;
+  margin-bottom:56px;
+}
+
+/* ── DIVIDER ── */
+.divider {
+  border:none;
+  height:1px;
+  background:var(--border);
+}
+
+/* ── ABOUT ── */
+#about {
+  padding:120px 0;
+  position:relative;
+}
+.about-grid {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:80px;
+  align-items:center;
+}
+.about-visual {
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+}
+.about-card {
+  background:var(--bg2);
+  border:1px solid var(--border);
+  border-radius:12px;
+  padding:20px 24px;
+  transition:transform 0.3s ease, border-color 0.3s;
+}
+.about-card:hover { border-color:var(--border2); transform:translateY(-4px); }
+.about-card-main {
+  display:flex;
+  flex-direction:column;
+  gap:16px;
+}
+.about-cards-row {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:12px;
+}
+.about-card-founded {
+  background: linear-gradient(135deg, rgba(79,124,255,0.1), rgba(201,168,76,0.08));
+  border-color: rgba(79,124,255,0.2);
+}
+.about-card-award {
+  border-color: rgba(62,207,142,0.2);
+  background: rgba(62,207,142,0.05);
+}
+.card-label { font-size:11px; color:var(--muted); text-transform:uppercase; letter-spacing:0.12em; margin-bottom:8px; }
+.card-big { font-family:var(--serif); font-size:52px; color:var(--text); line-height:1; margin-bottom:4px; }
+.card-sub { font-size:13px; color:var(--muted2); }
+.card-icon { font-size:24px; margin-bottom:8px; }
+.about-pillars { display:flex; flex-direction:column; gap:24px; margin-top:24px; }
+.pillar { display:flex; gap:16px; align-items:flex-start; }
+.pillar-dot {
+  width:8px; height:8px;
+  border-radius:50%;
+  background:var(--accent);
+  margin-top:6px;
+  flex-shrink:0;
+}
+.pillar h4 { font-size:14px; font-weight:500; color:var(--text); margin-bottom:4px; }
+.pillar p { font-size:13px; color:var(--muted2); line-height:1.5; }
+
+.progress-bars { margin-top:12px; }
+.prog-row { display:flex; align-items:center; gap:12px; margin-bottom:10px; }
+.prog-label { font-size:12px; color:var(--muted2); width:120px; flex-shrink:0; }
+.prog-bar { flex:1; height:4px; background:var(--border2); border-radius:99px; overflow:hidden; }
+.prog-fill { height:100%; border-radius:99px; background:linear-gradient(90deg, var(--accent), var(--gold)); transition:width 1.2s cubic-bezier(0.4,0,0.2,1); }
+.prog-val { font-size:12px; color:var(--muted2); width:36px; text-align:right; }
+
+/* ── ACADEMICS ── */
+#academics {
+  padding:120px 0;
+  background:var(--bg1);
+  border-top:1px solid var(--border);
+  border-bottom:1px solid var(--border);
+}
+.academics-grid {
+  display:grid;
+  grid-template-columns:repeat(3, 1fr);
+  gap:1px;
+  background:var(--border);
+  border:1px solid var(--border);
+  border-radius:12px;
+  overflow:hidden;
+}
+.dept-card {
+  background:var(--bg1);
+  padding:32px 28px;
+  cursor:pointer;
+  transition:background 0.2s;
+  position:relative;
+  overflow:hidden;
+}
+.dept-card::after {
+  content:'';
+  position:absolute;
+  inset:0;
+  background:linear-gradient(135deg, rgba(79,124,255,0.06), transparent);
+  opacity:0;
+  transition:opacity 0.3s;
+}
+.dept-card:hover { background:var(--bg2); }
+.dept-card:hover::after { opacity:1; }
+.dept-icon {
+  width:40px; height:40px;
+  border-radius:10px;
+  display:flex; align-items:center; justify-content:center;
+  font-size:20px;
+  margin-bottom:20px;
+  border:1px solid var(--border2);
+}
+.dept-card h3 { font-size:15px; font-weight:500; color:var(--text); margin-bottom:8px; }
+.dept-card p { font-size:13px; color:var(--muted); line-height:1.5; margin-bottom:16px; }
+.dept-tag {
+  display:inline-block;
+  padding:3px 10px;
+  border-radius:99px;
+  font-size:11px;
+  border:1px solid var(--border2);
+  color:var(--muted2);
+}
+.dept-tag.blue { border-color:rgba(79,124,255,0.4); color:var(--accent2); background:rgba(79,124,255,0.08); }
+.dept-tag.gold { border-color:rgba(201,168,76,0.4); color:var(--gold2); background:rgba(201,168,76,0.08); }
+.dept-tag.green { border-color:rgba(62,207,142,0.4); color:var(--green); background:rgba(62,207,142,0.08); }
+
+/* ── ADMISSIONS ── */
+#admissions {
+  padding:120px 0;
+}
+.admissions-layout {
+  display:grid;
+  grid-template-columns:1fr 420px;
+  gap:80px;
+  align-items:start;
+}
+.timeline {
+  position:relative;
+  padding-left:32px;
+}
+.timeline::before {
+  content:'';
+  position:absolute;
+  left:7px;
+  top:0;
+  bottom:0;
+  width:1px;
+  background:linear-gradient(to bottom, var(--accent), transparent);
+}
+.timeline-item {
+  position:relative;
+  margin-bottom:40px;
+  opacity:0;
+  transform:translateX(-20px);
+  transition:opacity 0.5s ease, transform 0.5s ease;
+}
+.timeline-item.visible { opacity:1; transform:translateX(0); }
+.timeline-dot {
+  position:absolute;
+  left:-28px;
+  top:4px;
+  width:14px; height:14px;
+  border-radius:50%;
+  border:2px solid var(--accent);
+  background:var(--bg);
+  display:flex; align-items:center; justify-content:center;
+}
+.timeline-dot::after {
+  content:'';
+  width:5px; height:5px;
+  border-radius:50%;
+  background:var(--accent);
+}
+.timeline-date { font-size:11px; color:var(--gold); text-transform:uppercase; letter-spacing:0.1em; margin-bottom:6px; }
+.timeline-title { font-size:15px; font-weight:500; color:var(--text); margin-bottom:4px; }
+.timeline-desc { font-size:13px; color:var(--muted); line-height:1.5; }
+
+.admissions-panel {
+  background:var(--bg2);
+  border:1px solid var(--border);
+  border-radius:12px;
+  padding:32px;
+  position:sticky;
+  top:80px;
+}
+.admissions-panel h3 { font-family:var(--serif); font-size:22px; margin-bottom:8px; }
+.admissions-panel p { font-size:13px; color:var(--muted2); margin-bottom:24px; line-height:1.5; }
+.form-group { margin-bottom:16px; }
+.form-group label { display:block; font-size:12px; color:var(--muted2); text-transform:uppercase; letter-spacing:0.1em; margin-bottom:6px; }
+.form-input {
+  width:100%;
+  background:var(--bg3);
+  border:1px solid var(--border);
+  border-radius:7px;
+  padding:10px 14px;
+  font-size:13px;
+  color:var(--text);
+  font-family:var(--sans);
+  outline:none;
+  transition:border-color 0.2s;
+}
+.form-input:focus { border-color:var(--accent); }
+.form-select {
+  width:100%;
+  background:var(--bg3);
+  border:1px solid var(--border);
+  border-radius:7px;
+  padding:10px 14px;
+  font-size:13px;
+  color:var(--text);
+  font-family:var(--sans);
+  outline:none;
+  cursor:pointer;
+  transition:border-color 0.2s;
+  appearance:none;
+}
+.form-select:focus { border-color:var(--accent); }
+
+/* ── NEWS / EVENTS ── */
+#news {
+  padding:120px 0;
+  background:var(--bg1);
+  border-top:1px solid var(--border);
+  border-bottom:1px solid var(--border);
+}
+.news-grid {
+  display:grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap:1px;
+  background:var(--border);
+  border:1px solid var(--border);
+  border-radius:12px;
+  overflow:hidden;
+}
+.news-card {
+  background:var(--bg1);
+  padding:28px;
+  cursor:pointer;
+  transition:background 0.2s;
+  display:flex;
+  flex-direction:column;
+}
+.news-card:hover { background:var(--bg2); }
+.news-card.featured {
+  grid-row: span 2;
+  border-right:1px solid var(--border);
+}
+.news-date { font-size:11px; color:var(--muted); text-transform:uppercase; letter-spacing:0.1em; margin-bottom:10px; }
+.news-category {
+  display:inline-block;
+  padding:3px 10px;
+  border-radius:99px;
+  font-size:11px;
+  margin-bottom:12px;
+  font-weight:500;
+}
+.cat-news { background:rgba(79,124,255,0.12); color:var(--accent2); border:1px solid rgba(79,124,255,0.25); }
+.cat-event { background:rgba(201,168,76,0.12); color:var(--gold2); border:1px solid rgba(201,168,76,0.25); }
+.cat-sport { background:rgba(62,207,142,0.12); color:var(--green); border:1px solid rgba(62,207,142,0.25); }
+.cat-award { background:rgba(229,83,75,0.12); color:#ff7b73; border:1px solid rgba(229,83,75,0.25); }
+.news-card h3 { font-size:16px; font-weight:500; color:var(--text); margin-bottom:8px; line-height:1.4; }
+.news-card.featured h3 { font-family:var(--serif); font-size:24px; line-height:1.25; }
+.news-card p { font-size:13px; color:var(--muted); line-height:1.5; flex:1; }
+.news-link {
+  margin-top:16px;
+  font-size:13px;
+  color:var(--accent2);
+  display:flex;
+  align-items:center;
+  gap:4px;
+  text-decoration:none;
+  width:fit-content;
+}
+.news-link::after { content:'→'; transition:transform 0.2s; }
+.news-card:hover .news-link::after { transform:translateX(4px); }
+
+/* ── EVENTS CALENDAR ── */
+#events {
+  padding:120px 0;
+}
+.events-header {
+  display:flex;
+  align-items:flex-end;
+  justify-content:space-between;
+  margin-bottom:48px;
+}
+.events-list { display:flex; flex-direction:column; gap:1px; background:var(--border); border:1px solid var(--border); border-radius:12px; overflow:hidden; }
+.event-row {
+  background:var(--bg);
+  padding:20px 28px;
+  display:flex;
+  align-items:center;
+  gap:24px;
+  cursor:pointer;
+  transition:background 0.2s;
+}
+.event-row:hover { background:var(--bg2); }
+.event-date-box {
+  width:52px; height:52px;
+  background:var(--bg2);
+  border:1px solid var(--border);
+  border-radius:10px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  flex-shrink:0;
+}
+.event-day { font-family:var(--serif); font-size:20px; line-height:1; }
+.event-month { font-size:10px; text-transform:uppercase; letter-spacing:0.1em; color:var(--muted); }
+.event-info { flex:1; }
+.event-info h4 { font-size:14px; font-weight:500; color:var(--text); margin-bottom:2px; }
+.event-info p { font-size:13px; color:var(--muted); }
+.event-time { font-size:12px; color:var(--muted2); flex-shrink:0; }
+.event-arrow { color:var(--muted); font-size:16px; transition:transform 0.2s; }
+.event-row:hover .event-arrow { transform:translateX(4px); color:var(--accent2); }
+
+/* ── SPORTS & ACTIVITIES ── */
+#activities {
+  padding:120px 0;
+  background:var(--bg1);
+  border-top:1px solid var(--border);
+  border-bottom:1px solid var(--border);
+}
+.activities-bento {
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  grid-template-rows:auto auto;
+  gap:1px;
+  background:var(--border);
+  border:1px solid var(--border);
+  border-radius:12px;
+  overflow:hidden;
+}
+.bento-cell {
+  background:var(--bg1);
+  padding:28px;
+  transition:background 0.2s;
+  cursor:pointer;
+  position:relative;
+  overflow:hidden;
+}
+.bento-cell:hover { background:var(--bg2); }
+.bento-cell.wide { grid-column:span 2; }
+.bento-cell.tall { grid-row:span 2; }
+.bento-bg-icon {
+  position:absolute;
+  right:-10px; bottom:-10px;
+  font-size:80px;
+  opacity:0.04;
+  pointer-events:none;
+  transition:opacity 0.3s, transform 0.3s;
+}
+.bento-cell:hover .bento-bg-icon { opacity:0.08; transform:scale(1.1); }
+.bento-cell .icon-wrap {
+  width:36px; height:36px;
+  border-radius:8px;
+  background:var(--bg3);
+  border:1px solid var(--border2);
+  display:flex; align-items:center; justify-content:center;
+  font-size:18px;
+  margin-bottom:16px;
+}
+.bento-cell h3 { font-size:16px; font-weight:500; color:var(--text); margin-bottom:6px; }
+.bento-cell p { font-size:13px; color:var(--muted); line-height:1.5; }
+.trophy-count { font-family:var(--serif); font-size:42px; color:var(--gold2); margin:8px 0; }
+
+/* ── STAFF ── */
+#staff {
+  padding:120px 0;
+}
+.staff-grid {
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:1px;
+  background:var(--border);
+  border:1px solid var(--border);
+  border-radius:12px;
+  overflow:hidden;
+}
+.staff-card {
+  background:var(--bg);
+  padding:28px 24px;
+  text-align:center;
+  cursor:pointer;
+  transition:background 0.2s;
+}
+.staff-card:hover { background:var(--bg2); }
+.avatar {
+  width:72px; height:72px;
+  border-radius:50%;
+  margin:0 auto 16px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-family:var(--serif);
+  font-size:24px;
+  color:white;
+  position:relative;
+}
+.avatar::after {
+  content:'';
+  position:absolute;
+  inset:-2px;
+  border-radius:50%;
+  background:linear-gradient(135deg, var(--accent), var(--gold));
+  z-index:-1;
+}
+.staff-name { font-size:15px; font-weight:500; color:var(--text); margin-bottom:4px; }
+.staff-role { font-size:12px; color:var(--muted); text-transform:uppercase; letter-spacing:0.08em; margin-bottom:8px; }
+.staff-subject { font-size:13px; color:var(--muted2); }
+
+/* ── RESOURCES / PARENT PORTAL ── */
+#resources {
+  padding:120px 0;
+  background:var(--bg1);
+  border-top:1px solid var(--border);
+  border-bottom:1px solid var(--border);
+}
+.resources-grid {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:16px;
+}
+.resource-card {
+  background:var(--bg);
+  border:1px solid var(--border);
+  border-radius:12px;
+  padding:28px;
+  cursor:pointer;
+  transition:border-color 0.2s, transform 0.2s, box-shadow 0.2s;
+  position:relative;
+  overflow:hidden;
+}
+.resource-card::before {
+  content:'';
+  position:absolute;
+  top:0; left:0; right:0;
+  height:2px;
+  background:linear-gradient(90deg, var(--accent), var(--gold));
+  transform:scaleX(0);
+  transform-origin:left;
+  transition:transform 0.3s;
+}
+.resource-card:hover { border-color:var(--border2); transform:translateY(-4px); box-shadow:0 24px 48px rgba(0,0,0,0.4); }
+.resource-card:hover::before { transform:scaleX(1); }
+.resource-icon { font-size:28px; margin-bottom:16px; }
+.resource-card h3 { font-size:16px; font-weight:500; color:var(--text); margin-bottom:8px; }
+.resource-card p { font-size:13px; color:var(--muted); line-height:1.5; margin-bottom:20px; }
+.resource-action { font-size:13px; color:var(--accent2); display:flex; align-items:center; gap:4px; }
+.resource-action::after { content:'→'; transition:transform 0.2s; }
+.resource-card:hover .resource-action::after { transform:translateX(4px); }
+
+/* ── GALLERY ── */
+#gallery {
+  padding:120px 0;
+}
+.gallery-marquee-wrap {
+  overflow:hidden;
+  margin-top:48px;
+}
+.gallery-marquee {
+  display:flex;
+  gap:16px;
+  width:max-content;
+  animation: marquee 30s linear infinite;
+}
+.gallery-marquee:hover { animation-play-state:paused; }
+@keyframes marquee {
+  from { transform:translateX(0); }
+  to { transform:translateX(-50%); }
+}
+.gallery-item {
+  width:280px; height:180px;
+  border-radius:10px;
+  border:1px solid var(--border);
+  overflow:hidden;
+  flex-shrink:0;
+  background:var(--bg2);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:40px;
+  position:relative;
+  cursor:pointer;
+  transition:border-color 0.2s;
+}
+.gallery-item:hover { border-color:var(--border2); }
+.gallery-item-label {
+  position:absolute;
+  bottom:12px; left:12px;
+  font-size:12px;
+  color:var(--muted2);
+  background:rgba(8,9,10,0.85);
+  padding:4px 10px;
+  border-radius:99px;
+  backdrop-filter:blur(8px);
+}
+.gallery-overlay {
+  position:absolute;
+  inset:0;
+  background:linear-gradient(to top, rgba(8,9,10,0.5), transparent);
+}
+
+/* ── CONTACT ── */
+#contact {
+  padding:120px 0;
+  background:var(--bg1);
+  border-top:1px solid var(--border);
+  border-bottom:1px solid var(--border);
+}
+.contact-grid {
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap:80px;
+}
+.contact-info { display:flex; flex-direction:column; gap:32px; }
+.contact-item { display:flex; gap:16px; align-items:flex-start; }
+.contact-icon {
+  width:40px; height:40px;
+  border-radius:10px;
+  background:var(--bg3);
+  border:1px solid var(--border);
+  display:flex; align-items:center; justify-content:center;
+  font-size:18px;
+  flex-shrink:0;
+}
+.contact-item h4 { font-size:14px; font-weight:500; color:var(--text); margin-bottom:4px; }
+.contact-item p { font-size:13px; color:var(--muted2); line-height:1.5; }
+.contact-form-wrap {
+  background:var(--bg2);
+  border:1px solid var(--border);
+  border-radius:12px;
+  padding:36px;
+}
+.contact-form-wrap h3 { font-family:var(--serif); font-size:22px; margin-bottom:6px; }
+.contact-form-wrap p { font-size:13px; color:var(--muted2); margin-bottom:28px; }
+.form-row { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+
+/* ── MAP PLACEHOLDER ── */
+.map-placeholder {
+  background:var(--bg2);
+  border:1px solid var(--border);
+  border-radius:12px;
+  height:200px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-direction:column;
+  gap:8px;
+  margin-top:24px;
+  position:relative;
+  overflow:hidden;
+}
+.map-grid {
+  position:absolute;
+  inset:0;
+  background-image:
+    linear-gradient(to right, rgba(255,255,255,0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255,255,255,0.03) 1px, transparent 1px);
+  background-size:24px 24px;
+}
+.map-dot {
+  width:16px; height:16px;
+  border-radius:50%;
+  background:var(--accent);
+  box-shadow:0 0 0 6px rgba(79,124,255,0.2), 0 0 0 12px rgba(79,124,255,0.1);
+  animation:map-ping 2s ease-in-out infinite;
+}
+@keyframes map-ping {
+  0%,100%{box-shadow:0 0 0 6px rgba(79,124,255,0.2),0 0 0 12px rgba(79,124,255,0.1)}
+  50%{box-shadow:0 0 0 10px rgba(79,124,255,0.15),0 0 0 20px rgba(79,124,255,0.06)}
+}
+.map-label { font-size:13px; color:var(--muted2); position:relative; z-index:1; }
+
+/* ── CTA BANNER ── */
+#cta-banner {
+  padding:120px 0;
+  text-align:center;
+  position:relative;
+  overflow:hidden;
+}
+.cta-glow {
+  position:absolute;
+  width:600px; height:400px;
+  background:radial-gradient(ellipse, rgba(79,124,255,0.1) 0%, transparent 70%);
+  top:50%;left:50%;
+  transform:translate(-50%,-50%);
+  pointer-events:none;
+}
+#cta-banner h2 { font-family:var(--serif); font-size:clamp(32px,4vw,56px); line-height:1.1; margin-bottom:16px; letter-spacing:-0.02em; }
+#cta-banner p { font-size:16px; color:var(--muted2); max-width:480px; margin:0 auto 40px; }
+.cta-actions { display:flex; gap:12px; justify-content:center; flex-wrap:wrap; }
+
+/* ── FOOTER ── */
+footer {
+  border-top:1px solid var(--border);
+  padding:60px 0 40px;
+}
+.footer-grid {
+  display:grid;
+  grid-template-columns:1.5fr 1fr 1fr 1fr;
+  gap:40px;
+  margin-bottom:48px;
+}
+.footer-brand h3 { font-family:var(--serif); font-size:18px; margin-bottom:8px; }
+.footer-brand p { font-size:13px; color:var(--muted); line-height:1.6; max-width:220px; }
+.footer-col h4 { font-size:12px; font-weight:500; text-transform:uppercase; letter-spacing:0.1em; color:var(--muted); margin-bottom:16px; }
+.footer-col ul { list-style:none; display:flex; flex-direction:column; gap:8px; }
+.footer-col ul li a { font-size:13px; color:var(--muted2); text-decoration:none; transition:color 0.2s; }
+.footer-col ul li a:hover { color:var(--text); }
+.footer-bottom {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding-top:24px;
+  border-top:1px solid var(--border);
+}
+.footer-bottom p { font-size:12px; color:var(--muted); }
+.footer-socials { display:flex; gap:12px; }
+.social-link {
+  width:32px; height:32px;
+  border-radius:7px;
+  background:var(--bg2);
+  border:1px solid var(--border);
+  display:flex; align-items:center; justify-content:center;
+  font-size:15px;
+  text-decoration:none;
+  color:var(--muted2);
+  transition:border-color 0.2s, color 0.2s;
+}
+.social-link:hover { border-color:var(--border2); color:var(--text); }
+
+/* ── MOBILE NAV TOGGLE ── */
+.nav-toggle { display:none; }
+
+/* ── SCROLL ANIMATIONS ── */
+.reveal {
+  opacity:0;
+  transform:translateY(24px);
+  transition:opacity 0.7s ease, transform 0.7s ease;
+}
+.reveal.visible { opacity:1; transform:translateY(0); }
+.reveal-delay-1 { transition-delay:0.1s; }
+.reveal-delay-2 { transition-delay:0.2s; }
+.reveal-delay-3 { transition-delay:0.3s; }
+
+/* ── MOBILE ── */
+@media(max-width:768px) {
+  nav { padding:0 20px; }
+  .nav-links, .btn-ghost { display:none; }
+  .container { padding:0 20px; }
+  h1.hero-title { font-size:36px; }
+  .hero-stats { gap:24px; flex-wrap:wrap; justify-content:center; }
+  .about-grid, .contact-grid { grid-template-columns:1fr; gap:40px; }
+  .academics-grid { grid-template-columns:1fr; }
+  .staff-grid { grid-template-columns:repeat(2,1fr); }
+  .news-grid { grid-template-columns:1fr; }
+  .news-card.featured { grid-row:span 1; border-right:none; border-bottom:1px solid var(--border); }
+  .activities-bento { grid-template-columns:repeat(2,1fr); }
+  .resources-grid { grid-template-columns:1fr; }
+  .admissions-layout { grid-template-columns:1fr; }
+  .footer-grid { grid-template-columns:1fr 1fr; gap:32px; }
+  .form-row { grid-template-columns:1fr; }
+}
+
+/* ── ANNOUNCEMENT BAR ── */
+.announcement-bar {
+  background:linear-gradient(90deg, rgba(79,124,255,0.15), rgba(201,168,76,0.1));
+  border-bottom:1px solid rgba(79,124,255,0.2);
+  padding:10px 40px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:12px;
+  font-size:13px;
+  position:fixed;
+  top:60px;
+  left:0; right:0;
+  z-index:899;
+  transition:transform 0.3s;
+}
+.announcement-bar span { color:var(--muted2); }
+.announcement-bar strong { color:var(--accent2); }
+.ann-close {
+  position:absolute;
+  right:20px;
+  background:none;
+  border:none;
+  color:var(--muted);
+  cursor:pointer;
+  font-size:16px;
+  padding:0;
+}
+.ann-close:hover { color:var(--text); }
+
+body.bar-hidden .announcement-bar { transform:translateY(-100%); }
+
+/* Push content for bar */
+#hero { padding-top:160px; }
+body.bar-hidden #hero { padding-top:120px; }
+
+</style>
 </head>
 <body>
-  <div class="grid-lines"></div>
-  <!-- Rest of your website body content goes here -->
+<div class="grid-lines"></div>
+
+<!-- ANNOUNCEMENT BAR -->
+<div class="announcement-bar" id="ann-bar">
+  <span>📌</span>
+  <span><strong>2025 Admissions Now Open</strong> — Applications close September 30, 2025.</span>
+  <a href="#admissions" class="btn btn-primary" style="padding:4px 14px;font-size:12px;">Apply Now</a>
+  <button class="ann-close" onclick="document.body.classList.add('bar-hidden');document.getElementById('ann-bar').style.display='none';">✕</button>
+</div>
+
+<!-- NAV -->
+<nav id="navbar">
+  <a href="#" class="nav-logo">
+    <div class="logo-mark">D</div>
+    <div class="logo-text">
+      Downey Collage
+      <span>Secondary School</span>
+    </div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#academics">Academics</a></li>
+    <li><a href="#admissions">Admissions</a></li>
+    <li><a href="#news">News</a></li>
+    <li><a href="#events">Events</a></li>
+    <li><a href="#activities">Activities</a></li>
+    <li><a href="#staff">Staff</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <div class="nav-cta">
+    <button class="theme-toggle" id="themeToggle" title="Toggle light/dark mode">
+      <span class="icon-sun">☀️</span>
+      <span class="icon-moon">🌙</span>
+    </button>
+    <a href="#resources" class="btn btn-ghost">Parent Portal</a>
+    <a href="#admissions" class="btn btn-primary">Apply</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-glow"></div>
+  <div class="hero-glow2"></div>
+  <div class="hero-badge">
+    <span class="hero-badge-dot"></span>
+    Admissions Open · Class of 2026
+  </div>
+  <p class="hero-eyebrow">Est. 2018 · Ibba County, South Sudan</p>
+  <h1 class="hero-title">
+    Where <em>Brilliant</em> Minds<br>
+    Shape the <span class="gold-text">Future</span>
+  </h1>
+  <p class="hero-sub">Downey Collage Secondary School — a growing community of curious learners guided by dedicated teachers in Ibba County, South Sudan.</p>
+  <div class="hero-actions">
+    <a href="#admissions" class="btn btn-primary" style="font-size:15px;padding:10px 24px;">Start Application →</a>
+    <a href="#about" class="btn btn-ghost" style="font-size:15px;padding:10px 24px;">Explore School</a>
+    <a href="#contact" class="btn btn-ghost" style="font-size:15px;padding:10px 24px;">Get in Touch</a>
+  </div>
+  <div class="hero-stats">
+    <div class="stat">
+      <div class="stat-num">500<sup>+</sup></div>
+      <div class="stat-label">Students Enrolled</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">7</div>
+      <div class="stat-label">Years Growing Strong</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">8<sup>+</sup></div>
+      <div class="stat-label">Clubs & Activities</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">30:1</div>
+      <div class="stat-label">Student-Teacher Ratio</div>
+    </div>
+  </div>
+  <div class="scroll-indicator">
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-visual">
+        <div class="about-card about-card-main">
+          <div>
+            <div class="card-label">School Performance</div>
+            <div class="card-big" style="font-size:40px;">Good</div>
+            <div class="card-sub">Growing School · Ibba County</div>
+          </div>
+          <div class="progress-bars">
+            <div class="prog-row">
+              <span class="prog-label">STEM Participation</span>
+              <div class="prog-bar"><div class="prog-fill" data-width="72" style="width:0%"></div></div>
+              <span class="prog-val">72%</span>
+            </div>
+            <div class="prog-row">
+              <span class="prog-label">Arts & Humanities</span>
+              <div class="prog-bar"><div class="prog-fill" data-width="65" style="width:0%"></div></div>
+              <span class="prog-val">65%</span>
+            </div>
+            <div class="prog-row">
+              <span class="prog-label">Sports Participation</span>
+              <div class="prog-bar"><div class="prog-fill" data-width="78" style="width:0%"></div></div>
+              <span class="prog-val">78%</span>
+            </div>
+            <div class="prog-row">
+              <span class="prog-label">Student Retention</span>
+              <div class="prog-bar"><div class="prog-fill" data-width="85" style="width:0%"></div></div>
+              <span class="prog-val">85%</span>
+            </div>
+          </div>
+        </div>
+        <div class="about-cards-row">
+          <div class="about-card about-card-award">
+            <div class="card-icon">🏆</div>
+            <div class="card-label">County Awards</div>
+            <div style="font-size:22px;font-weight:500;color:var(--gold2);margin-bottom:2px;">3 Awards</div>
+            <div class="card-sub">Since 2018 founding</div>
+          </div>
+          <div class="about-card about-card-founded">
+            <div class="card-label">Founded</div>
+            <div class="card-big" style="font-size:36px;color:var(--accent2);">2018</div>
+            <div class="card-sub">7 years building future leaders</div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="section-tag">Who We Are</div>
+        <h2 class="section-title reveal">A School Built on<br><em>Purpose & Passion</em></h2>
+        <p class="section-desc reveal reveal-delay-1">Since 2018, Downey Collage Secondary School has been committed to nurturing every student's potential — academically, socially, and personally — in an environment that challenges and inspires the next generation of South Sudan's leaders.</p>
+        <div class="about-pillars">
+          <div class="pillar reveal reveal-delay-1">
+            <div class="pillar-dot"></div>
+            <div>
+              <h4>Academic Rigour</h4>
+              <p>A solid curriculum covering the core subjects students need to progress, build skills, and succeed in further study or work.</p>
+            </div>
+          </div>
+          <div class="pillar reveal reveal-delay-2">
+            <div class="pillar-dot" style="background:var(--gold)"></div>
+            <div>
+              <h4>Character Development</h4>
+              <p>Beyond grades — we build integrity, leadership, and resilience through mentorship, service, and community.</p>
+            </div>
+          </div>
+          <div class="pillar reveal reveal-delay-3">
+            <div class="pillar-dot" style="background:var(--green)"></div>
+            <div>
+              <h4>Inclusive Community</h4>
+              <p>A welcoming environment that celebrates diversity, equity, and belonging for every student and family.</p>
+            </div>
+          </div>
+        </div>
+        <div style="margin-top:32px;">
+          <a href="#" class="btn btn-ghost">Read Our Story →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- ACADEMICS -->
+<section id="academics">
+  <div class="container">
+    <div class="section-tag">Departments</div>
+    <h2 class="section-title reveal">Our <em>Departments</em></h2>
+    <p class="section-desc reveal">We offer a broad secondary school curriculum across core departments, taught by committed teachers who care about every student's progress.</p>
+    <div class="academics-grid reveal">
+      <div class="dept-card">
+        <div class="dept-icon">🔬</div>
+        <h3>Sciences</h3>
+        <p>Biology, Chemistry, and Physics — practical lessons with basic lab work to help students understand the natural world around them.</p>
+        <span class="dept-tag blue">STEM Track</span>
+      </div>
+      <div class="dept-card">
+        <div class="dept-icon">📐</div>
+        <h3>Mathematics</h3>
+        <p>Pure, Applied, and Statistics. Solid foundations in numeracy, problem-solving, and practical computation for everyday life and further study.</p>
+        <span class="dept-tag blue">Advanced Stream</span>
+      </div>
+      <div class="dept-card">
+        <div class="dept-icon">🌍</div>
+        <h3>Humanities & Social Sciences</h3>
+        <p>History, Geography, Economics, and Sociology — developing global citizenship and critical analysis.</p>
+        <span class="dept-tag gold">Core Subject</span>
+      </div>
+      <div class="dept-card">
+        <div class="dept-icon">📚</div>
+        <h3>Languages & Literature</h3>
+        <p>English and Arabic as core languages, with literature, reading, writing, and communication skills built across all year groups.</p>
+        <span class="dept-tag gold">Core Subject</span>
+      </div>
+      <div class="dept-card">
+        <div class="dept-icon">🎨</div>
+        <h3>Arts & Design</h3>
+        <p>Fine Art, Drama, and Music. Students explore creativity through performance, visual art, and school productions held each term.</p>
+        <span class="dept-tag">Creative Arts</span>
+      </div>
+      <div class="dept-card">
+        <div class="dept-icon">💻</div>
+        <h3>Technology & Computing</h3>
+        <p>Basic computing, digital literacy, and introductory programming. Students learn practical technology skills for modern life and work.</p>
+        <span class="dept-tag blue">STEM Track</span>
+      </div>
+      <div class="dept-card">
+        <div class="dept-icon">⚽</div>
+        <h3>Physical Education</h3>
+        <p>Athletics, team sports, and health education. Students compete in inter-school and county-level sporting events each year.</p>
+        <span class="dept-tag green">Athletics</span>
+      </div>
+      <div class="dept-card">
+        <div class="dept-icon">🙏</div>
+        <h3>Religious & Ethical Studies</h3>
+        <p>CRE, IRE, and Moral Philosophy — building ethical foundations and empathy in a pluralistic world.</p>
+        <span class="dept-tag">Values</span>
+      </div>
+      <div class="dept-card">
+        <div class="dept-icon">🏗️</div>
+        <h3>Technical & Applied Skills</h3>
+        <p>Woodwork, metalwork, home science, agriculture — practical skills and entrepreneurship for tomorrow.</p>
+        <span class="dept-tag gold">Vocational</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ADMISSIONS -->
+<section id="admissions">
+  <div class="container">
+    <div class="section-tag">Join Us</div>
+    <h2 class="section-title reveal">Admission <em>Process</em></h2>
+    <p class="section-desc reveal">We welcome students of exceptional potential, character, and drive. Our admissions process is designed to be clear, fair, and supportive.</p>
+    <div class="admissions-layout">
+      <div>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-date">Step 1 — Anytime</div>
+            <div class="timeline-title">Submit Online Enquiry</div>
+            <div class="timeline-desc">Complete the enquiry form or contact our admissions office directly. We will send you the school's information and guide you through the next steps.</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-date">Step 2 — Rolling Basis</div>
+            <div class="timeline-title">School Visit & Assessment</div>
+            <div class="timeline-desc">Book a school visit. Students attend a half-day session and complete a brief written assessment in English, Maths, and Science.</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-date">Step 3 — Within 2 Weeks</div>
+            <div class="timeline-title">Interview & Transcript Review</div>
+            <div class="timeline-desc">A 30-minute interview with the Head of Admissions. Previous school transcripts and recommendation letters are reviewed.</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-date">Step 4 — 5 Business Days</div>
+            <div class="timeline-title">Offer & Acceptance</div>
+            <div class="timeline-desc">Successful applicants receive a formal offer letter. Upon acceptance, pay the non-refundable registration fee to secure your place.</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot" style="border-color:var(--green)"><div style="width:5px;height:5px;border-radius:50%;background:var(--green)"></div></div>
+            <div class="timeline-date">Step 5 — Term Start</div>
+            <div class="timeline-title">Orientation & Enrolment</div>
+            <div class="timeline-desc">New students attend an orientation day, meet their class teacher, get shown around the school, and are introduced to school rules and routines before the term begins.</div>
+          </div>
+        </div>
+        <div style="margin-top:32px;padding:24px;background:var(--bg2);border:1px solid var(--border);border-radius:12px;">
+          <div style="font-size:13px;color:var(--muted);margin-bottom:12px;text-transform:uppercase;letter-spacing:0.1em;font-size:11px;">Fees 2025 / 2026</div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+            <div>
+              <div style="font-size:12px;color:var(--muted);margin-bottom:4px;">Day Scholar</div>
+              <div style="font-family:var(--serif);font-size:24px;color:var(--text);">SSP 85,000</div>
+              <div style="font-size:12px;color:var(--muted);">per term</div>
+            </div>
+            <div>
+              <div style="font-size:12px;color:var(--muted);margin-bottom:4px;">Boarding</div>
+              <div style="font-family:var(--serif);font-size:24px;color:var(--gold2);">SSP 140,000</div>
+              <div style="font-size:12px;color:var(--muted);">per term</div>
+            </div>
+          </div>
+          <p style="font-size:12px;color:var(--muted);margin-top:12px;">Bursaries and scholarships available. Contact the Finance Office for means-tested support options.</p>
+        </div>
+      </div>
+      <div class="admissions-panel">
+        <h3>Request Information</h3>
+        <p>Fill out this form and our admissions team will reach out within 24 hours.</p>
+        <div class="form-group">
+          <label>Student's Full Name</label>
+          <input type="text" class="form-input" placeholder="e.g. Amara Osei" />
+        </div>
+        <div class="form-group">
+          <label>Parent / Guardian Name</label>
+          <input type="text" class="form-input" placeholder="e.g. Mr. James Osei" />
+        </div>
+        <div class="form-group">
+          <label>Email Address</label>
+          <input type="email" class="form-input" placeholder="you@example.com" />
+        </div>
+        <div class="form-group">
+          <label>Phone Number</label>
+          <input type="tel" class="form-input" placeholder="+211 920 000 000" />
+          <select class="form-select">
+            <option>2025 — Term 3</option>
+            <option>2026 — Term 1 (January)</option>
+            <option>2026 — Term 2 (May)</option>
+            <option>Future — Enquiry Only</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Form / Year Group Applying For</label>
+          <select class="form-select">
+            <option>Form 1 (Year 9)</option>
+            <option>Form 2 (Year 10)</option>
+            <option>Form 3 (Year 11)</option>
+            <option>Form 4 (Year 12)</option>
+            <option>Form 5 / Lower Sixth</option>
+            <option>Form 6 / Upper Sixth</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Message (Optional)</label>
+          <textarea class="form-input" rows="3" placeholder="Any questions or special circumstances..."></textarea>
+        </div>
+        <button class="btn btn-primary" style="width:100%;padding:12px;font-size:14px;justify-content:center;" onclick="this.textContent='✓ Request Sent! We\'ll be in touch.';this.style.background='#3ecf8e';">Send Request →</button>
+        <p style="font-size:12px;color:var(--muted);text-align:center;margin-top:12px;">We respond within 24 hours · Mon–Fri, 8am–5pm</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NEWS -->
+<section id="news">
+  <div class="container">
+    <div class="section-tag">Latest</div>
+    <h2 class="section-title reveal">News & <em>Announcements</em></h2>
+    <div class="news-grid reveal">
+      <div class="news-card featured">
+        <div class="news-date">June 2, 2025</div>
+        <span class="news-category cat-award">🏅 Achievement</span>
+        <h3>Downey Students Excel at County Science Fair — 2 First Places</h3>
+        <p>Our Science Department is proud of a strong showing at the 2025 Ibba County Schools Science Fair. Form 3 student Grace Wambui placed first in Chemistry, and the Biology group project took first place in the applied sciences category — a proud moment for our young school.</p>
+        <p style="margin-top:12px;">The results reflect the hard work of our Science teachers and the dedication of our students to learning and discovery.</p>
+        <a href="#" class="news-link">Read Full Story</a>
+      </div>
+      <div class="news-card">
+        <div class="news-date">May 28, 2025</div>
+        <span class="news-category cat-event">📅 Event</span>
+        <h3>Annual Sports Day — Save the Date</h3>
+        <p>This year's inter-house Athletics Day is scheduled for July 18. All students, parents, and community members are invited to cheer on our competing houses.</p>
+        <a href="#" class="news-link">Details</a>
+      </div>
+      <div class="news-card">
+        <div class="news-date">May 22, 2025</div>
+        <span class="news-category cat-news">📢 Notice</span>
+        <h3>New Computer Room Opens for Students</h3>
+        <p>The school's newly set-up computer room is now open, giving students access to computers for digital learning and basic computing classes.</p>
+        <a href="#" class="news-link">Details</a>
+      </div>
+      <div class="news-card">
+        <div class="news-date">May 15, 2025</div>
+        <span class="news-category cat-sport">⚽ Sports</span>
+        <h3>Football Team Wins County Inter-School Tournament</h3>
+        <p>Our Under-18 football squad has won the Ibba County inter-school tournament after a strong run in the competition — a great achievement for the team and the school.</p>
+        <a href="#" class="news-link">Details</a>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:40px;">
+      <a href="#" class="btn btn-ghost">View All News →</a>
+    </div>
+  </div>
+</section>
+
+<!-- EVENTS -->
+<section id="events">
+  <div class="container">
+    <div class="events-header">
+      <div>
+        <div class="section-tag">Calendar</div>
+        <h2 class="section-title reveal" style="margin-bottom:0;">Upcoming <em>Events</em></h2>
+      </div>
+      <a href="#" class="btn btn-ghost reveal">Full Calendar →</a>
+    </div>
+    <div class="events-list reveal">
+      <div class="event-row">
+        <div class="event-date-box" style="border-color:rgba(79,124,255,0.3);background:rgba(79,124,255,0.06);">
+          <div class="event-day" style="color:var(--accent2);">18</div>
+          <div class="event-month">Jul</div>
+        </div>
+        <div class="event-info">
+          <h4>Annual Sports Day 2025</h4>
+          <p>Inter-house athletics competition · Main Grounds</p>
+        </div>
+        <div class="event-time">8:00 AM – 5:00 PM</div>
+        <span class="news-category cat-sport" style="flex-shrink:0;">Sports</span>
+        <span class="event-arrow">→</span>
+      </div>
+      <div class="event-row">
+        <div class="event-date-box" style="border-color:rgba(201,168,76,0.3);background:rgba(201,168,76,0.06);">
+          <div class="event-day" style="color:var(--gold2);">25</div>
+          <div class="event-month">Jul</div>
+        </div>
+        <div class="event-info">
+          <h4>Mid-Year Parent-Teacher Conference</h4>
+          <p>Discuss student progress with class teachers · Hall A & B</p>
+        </div>
+        <div class="event-time">9:00 AM – 1:00 PM</div>
+        <span class="news-category cat-event" style="flex-shrink:0;">Parents</span>
+        <span class="event-arrow">→</span>
+      </div>
+      <div class="event-row">
+        <div class="event-date-box">
+          <div class="event-day">8</div>
+          <div class="event-month">Aug</div>
+        </div>
+        <div class="event-info">
+          <h4>SSSCE Preparatory Mock Exams Begin</h4>
+          <p>Form 4 compulsory mock examination · All classrooms</p>
+        </div>
+        <div class="event-time">All Day</div>
+        <span class="news-category cat-news" style="flex-shrink:0;">Exams</span>
+        <span class="event-arrow">→</span>
+      </div>
+      <div class="event-row">
+        <div class="event-date-box" style="border-color:rgba(62,207,142,0.3);background:rgba(62,207,142,0.06);">
+          <div class="event-day" style="color:var(--green);">22</div>
+          <div class="event-month">Aug</div>
+        </div>
+        <div class="event-info">
+          <h4>Drama & Music Festival</h4>
+          <p>Annual inter-school performing arts showcase · Main Hall</p>
+        </div>
+        <div class="event-time">6:00 PM – 9:00 PM</div>
+        <span class="news-category cat-event" style="flex-shrink:0;">Arts</span>
+        <span class="event-arrow">→</span>
+      </div>
+      <div class="event-row">
+        <div class="event-date-box">
+          <div class="event-day">5</div>
+          <div class="event-month">Sep</div>
+        </div>
+        <div class="event-info">
+          <h4>Term 3 Begins — All Students Report</h4>
+          <p>Opening assembly · Mandatory attendance</p>
+        </div>
+        <div class="event-time">7:30 AM</div>
+        <span class="news-category cat-news" style="flex-shrink:0;">School</span>
+        <span class="event-arrow">→</span>
+      </div>
+      <div class="event-row">
+        <div class="event-date-box" style="border-color:rgba(229,83,75,0.3);background:rgba(229,83,75,0.06);">
+          <div class="event-day" style="color:#ff7b73;">30</div>
+          <div class="event-month">Sep</div>
+        </div>
+        <div class="event-info">
+          <h4>Admissions Deadline — Class of 2026</h4>
+          <p>Final date to submit applications for January intake</p>
+        </div>
+        <div class="event-time">5:00 PM</div>
+        <span class="news-category cat-award" style="flex-shrink:0;background:rgba(229,83,75,0.12);color:#ff7b73;border-color:rgba(229,83,75,0.3);">Deadline</span>
+        <span class="event-arrow">→</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ACTIVITIES -->
+<section id="activities">
+  <div class="container">
+    <div class="section-tag">Co-Curricular</div>
+    <h2 class="section-title reveal">Sports & <em>Activities</em></h2>
+    <p class="section-desc reveal">Life at Downey goes beyond the classroom. We have a growing range of clubs, sport activities, and community programmes that give students a chance to discover their interests and build good character.</p>
+    <div class="activities-bento reveal">
+      <div class="bento-cell wide" style="border-right:1px solid var(--border);border-bottom:1px solid var(--border);">
+        <div class="icon-wrap">⚽</div>
+        <h3>Athletics & Sports</h3>
+        <p>Football, Volleyball, Basketball, Athletics, and Netball — our main sport codes, with inter-house competitions each term and participation in county inter-school events.</p>
+        <div class="trophy-count">5</div>
+        <p style="font-size:12px;color:var(--muted);">County & Inter-School Trophies</p>
+        <div class="bento-bg-icon">🏆</div>
+      </div>
+      <div class="bento-cell" style="border-right:1px solid var(--border);border-bottom:1px solid var(--border);">
+        <div class="icon-wrap">🎭</div>
+        <h3>Performing Arts</h3>
+        <p>Drama, Music, and Choir. Students perform at school events, end-of-term shows, and take part in inter-school cultural activities in the county.</p>
+        <div class="bento-bg-icon">🎵</div>
+      </div>
+      <div class="bento-cell" style="border-bottom:1px solid var(--border);">
+        <div class="icon-wrap">🤖</div>
+        <h3>Science & Computing Club</h3>
+        <p>Students explore science experiments, basic computing, and problem-solving projects. The club takes part in the county schools science fair each year.</p>
+        <div class="bento-bg-icon">💡</div>
+      </div>
+      <div class="bento-cell" style="border-right:1px solid var(--border);">
+        <div class="icon-wrap">🗣️</div>
+        <h3>Debate Society</h3>
+        <p>Students develop public speaking, argumentation, and confidence through weekly sessions and participation in inter-school debate competitions in the county.</p>
+        <div class="bento-bg-icon">📜</div>
+      </div>
+      <div class="bento-cell" style="border-right:1px solid var(--border);">
+        <div class="icon-wrap">📷</div>
+        <h3>Media & Journalism</h3>
+        <p>The Downey Chronicle student newspaper, school podcast, and photography club — telling our story.</p>
+        <div class="bento-bg-icon">📰</div>
+      </div>
+      <div class="bento-cell" style="border-right:1px solid var(--border);">
+        <div class="icon-wrap">🌿</div>
+        <h3>Eco & Environment</h3>
+        <p>Green school programme, tree planting drives, sustainability projects, and nature conservation club.</p>
+        <div class="bento-bg-icon">🌍</div>
+      </div>
+      <div class="bento-cell">
+        <div class="icon-wrap">🤝</div>
+        <h3>Community Service</h3>
+        <p>Students take part in community clean-ups, visits to local centres, and school-organised service activities that build empathy and a sense of responsibility.</p>
+        <div class="bento-bg-icon">💙</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STAFF -->
+<section id="staff">
+  <div class="container">
+    <div class="section-tag">Our People</div>
+    <h2 class="section-title reveal">Meet the <em>Team</em></h2>
+    <p class="section-desc reveal">Our staff are committed, caring teachers and support staff who work hard every day to give every student the best chance to succeed.</p>
+    <div class="staff-grid reveal">
+      <div class="staff-card">
+        <div class="avatar" style="background:linear-gradient(135deg,#4f7cff,#2a4fb0);">M</div>
+        <div class="staff-name">Dr. Margaret Odhiambo</div>
+        <div class="staff-role">Principal</div>
+        <div class="staff-subject">Education Leadership · Principal</div>
+      </div>
+      <div class="staff-card">
+        <div class="avatar" style="background:linear-gradient(135deg,#c9a84c,#8a6a20);">J</div>
+        <div class="staff-name">Mr. James Kariuki</div>
+        <div class="staff-role">Deputy Principal</div>
+        <div class="staff-subject">Academics & Curriculum</div>
+      </div>
+      <div class="staff-card">
+        <div class="avatar" style="background:linear-gradient(135deg,#3ecf8e,#1a7a52);">A</div>
+        <div class="staff-name">Ms. Amina Hassan</div>
+        <div class="staff-role">Head of Sciences</div>
+        <div class="staff-subject">Chemistry & Biology</div>
+      </div>
+      <div class="staff-card">
+        <div class="avatar" style="background:linear-gradient(135deg,#e5534b,#8a2020);">P</div>
+        <div class="staff-name">Mr. Peter Ndegwa</div>
+        <div class="staff-role">Head of Mathematics</div>
+        <div class="staff-subject">Pure & Applied Mathematics</div>
+      </div>
+      <div class="staff-card">
+        <div class="avatar" style="background:linear-gradient(135deg,#b06cf0,#6a20a0);">G</div>
+        <div class="staff-name">Mrs. Grace Wanjiku</div>
+        <div class="staff-role">Head of Languages</div>
+        <div class="staff-subject">English & French Literature</div>
+      </div>
+      <div class="staff-card">
+        <div class="avatar" style="background:linear-gradient(135deg,#f07850,#a03820);">R</div>
+        <div class="staff-name">Mr. Reuben Otieno</div>
+        <div class="staff-role">Head of PE & Sports</div>
+        <div class="staff-subject">Athletics & Team Coaching</div>
+      </div>
+      <div class="staff-card">
+        <div class="avatar" style="background:linear-gradient(135deg,#50b8e8,#1a6090);">F</div>
+        <div class="staff-name">Ms. Fatuma Said</div>
+        <div class="staff-role">Head of Arts & Humanities</div>
+        <div class="staff-subject">History, Geography & Art</div>
+      </div>
+      <div class="staff-card">
+        <div class="avatar" style="background:linear-gradient(135deg,#e8c97b,#a0802a);">D</div>
+        <div class="staff-name">Mr. David Mwangi</div>
+        <div class="staff-role">Head of Technology</div>
+        <div class="staff-subject">Computing & Digital Literacy</div>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:32px;">
+      <a href="#" class="btn btn-ghost">Full Staff Directory →</a>
+    </div>
+  </div>
+</section>
+
+<!-- RESOURCES / PARENT PORTAL -->
+<section id="resources">
+  <div class="container">
+    <div class="section-tag">Resources</div>
+    <h2 class="section-title reveal">For Students <em>& Parents</em></h2>
+    <p class="section-desc reveal">Everything you need — from school policies and academic calendars to report cards and library access — in one place.</p>
+    <div class="resources-grid reveal">
+      <div class="resource-card">
+        <div class="resource-icon">👨‍👩‍👧</div>
+        <h3>Parent Portal</h3>
+        <p>View your child's attendance, academic progress, fee statements, and communicate directly with class teachers.</p>
+        <div class="resource-action">Access Portal</div>
+      </div>
+      <div class="resource-card">
+        <div class="resource-icon">📅</div>
+        <h3>Academic Calendar</h3>
+        <p>Term dates, exam schedules, school holidays, public holidays, and key events for the 2025 academic year.</p>
+        <div class="resource-action">Download PDF</div>
+      </div>
+      <div class="resource-card">
+        <div class="resource-icon">📋</div>
+        <h3>School Policies</h3>
+        <p>Student code of conduct, uniform guidelines, disciplinary procedures, and safeguarding policies.</p>
+        <div class="resource-action">View Policies</div>
+      </div>
+      <div class="resource-card">
+        <div class="resource-icon">📚</div>
+        <h3>Library & e-Resources</h3>
+        <p>Access our digital library, e-books, past exam papers (SSSCE/Cambridge), and research databases from anywhere.</p>
+        <div class="resource-action">Open Library</div>
+      </div>
+      <div class="resource-card">
+        <div class="resource-icon">🎓</div>
+        <h3>Learning Management System</h3>
+        <p>Student assignments, teacher-uploaded notes, recorded lessons, and class discussion boards via our LMS.</p>
+        <div class="resource-action">Go to LMS</div>
+      </div>
+      <div class="resource-card">
+        <div class="resource-icon">💳</div>
+        <h3>Fee Payment Portal</h3>
+        <p>View outstanding balances, download invoices, and pay fees securely via bank transfer or mobile money.</p>
+        <div class="resource-action">Pay Fees</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery">
+  <div class="container">
+    <div class="section-tag">School Life</div>
+    <h2 class="section-title reveal">Life at <em>Downey</em></h2>
+    <p class="section-desc reveal">A glimpse of school life, student activities, and the community that makes Downey Collage a special place to learn and grow.</p>
+  </div>
+  <div class="gallery-marquee-wrap">
+    <div class="gallery-marquee">
+      <!-- Duplicate items for infinite scroll -->
+      <div class="gallery-item" style="background:linear-gradient(135deg,#0d1a33,#1a2a50);"><span>🔬</span><div class="gallery-overlay"></div><div class="gallery-item-label">Science Labs</div></div>
+      <div class="gallery-item" style="background:linear-gradient(135deg,#1a1a0a,#2a2a10);"><span>⚽</span><div class="gallery-overlay"></div><div class="gallery-item-label">Sports Grounds</div></div>
+      <div class="gallery-item" style="background:linear-gradient(135deg,#0a1a0a,#102010);"><span>📚</span><div class="gallery-overlay"></div><div class="gallery-item-label">Library</div></div>
+      <div class="gallery-item" style="background:linear-gradient(135deg,#1a0a0a,#2a1010);"><span>🎭</span><div class="gallery-overlay"></div><div class="gallery-item-label">Drama Theatre</div></div>
+      <div class="gallery-item" style="background:linear-gradient(135deg,#0a0a1a,#101020);"><span>💻</span><div class="gallery-overlay"></div><div class="gallery-item-label">Computer Lab</div></div>
+      <div class="gallery-item" style="background:linear-gradient(135deg,#1a1a0a,#20200a);"><span>🏆</span><div class="gallery-overlay"></div><div class="gallery-item-label">Trophy Room</div></div>
+      <div class="gallery-item" style="background:linear-gradient(135deg,#0a1a1a,#101a1a);"><span>🎨</span><div class="gallery-overlay"></div><div class="gallery-item-label">Art Studio</div></div>
+      <div class="gallery-item" style="background:linear-gradient(135deg,#1a0a1a,#201020);"><span>🌿</span><div class="gallery-overlay"></div><div class="gallery-item-label">School Garden</div></div>
+      <!-- Duplicates -->
+      <div class="gallery-item" style="background:linear-gradient(135deg,#0d1a33,#1a2a50);"><span>🔬</span><div class="gallery-overlay"></div><div class="gallery-item-label">Science Labs</div></div>
+      <div class="gallery-item" style="background:linear-gradient(135deg,#1a1a0a,#2a2a10);"><span>⚽</span><div class="gallery-overlay"></div><div class="gallery-item-label">Sports Grounds</div></div>
+      <div class="gallery-item" style="background:linear-gradient(135deg,#0a1a0a,#102010);"><span>📚</span><div class="gallery-overlay"></div><div class="gallery-item-label">Library</div></div>
+      <div class="gallery-item" style="background:linear-gradient(135deg,#1a0a0a,#2a1010);"><span>🎭</span><div class="gallery-overlay"></div><div class="gallery-item-label">Drama Theatre</div></div>
+      <div class="gallery-item" style="background:linear-gradient(135deg,#0a0a1a,#101020);"><span>💻</span><div class="gallery-overlay"></div><div class="gallery-item-label">Computer Lab</div></div>
+      <div class="gallery-item" style="background:linear-gradient(135deg,#1a1a0a,#20200a);"><span>🏆</span><div class="gallery-overlay"></div><div class="gallery-item-label">Trophy Room</div></div>
+      <div class="gallery-item" style="background:linear-gradient(135deg,#0a1a1a,#101a1a);"><span>🎨</span><div class="gallery-overlay"></div><div class="gallery-item-label">Art Studio</div></div>
+      <div class="gallery-item" style="background:linear-gradient(135deg,#1a0a1a,#201020);"><span>🌿</span><div class="gallery-overlay"></div><div class="gallery-item-label">School Garden</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="container">
+    <div class="section-tag">Get in Touch</div>
+    <h2 class="section-title reveal">Contact <em>Us</em></h2>
+    <p class="section-desc reveal">Our team is ready to answer your questions. Whether you're a prospective family, current parent, or community partner — we'd love to hear from you.</p>
+    <div class="contact-grid">
+      <div class="contact-info reveal">
+        <div class="contact-item">
+          <div class="contact-icon">📍</div>
+          <div>
+            <h4>School Address</h4>
+            <p>Ibba Town, Ibba County<br>Western Equatoria State<br>South Sudan</p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">📞</div>
+          <div>
+            <h4>Phone</h4>
+            <p>Main Office: +211 920 123 456<br>Admissions: +211 920 123 457<br>Bursar: +211 920 123 458</p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">✉️</div>
+          <div>
+            <h4>Email</h4>
+            <p>info@downeycollage.edu.ss<br>admissions@downeycollage.edu.ss<br>principal@downeycollage.edu.ss</p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">🕐</div>
+          <div>
+            <h4>Office Hours</h4>
+            <p>Monday – Friday: 7:30 AM – 5:30 PM<br>Saturday: 8:00 AM – 12:00 PM<br>Closed Sundays & Public Holidays</p>
+          </div>
+        </div>
+        <div class="map-placeholder">
+          <div class="map-grid"></div>
+          <div class="map-dot"></div>
+          <p class="map-label">Downey Collage — Ibba County, South Sudan</p>
+        </div>
+      </div>
+      <div class="contact-form-wrap reveal reveal-delay-2">
+        <h3>Send a Message</h3>
+        <p>We'll get back to you within one business day.</p>
+        <div class="form-row">
+          <div class="form-group" style="margin-bottom:0">
+            <label>First Name</label>
+            <input type="text" class="form-input" placeholder="First name" />
+          </div>
+          <div class="form-group" style="margin-bottom:0">
+            <label>Last Name</label>
+            <input type="text" class="form-input" placeholder="Last name" />
+          </div>
+        </div>
+        <div class="form-group" style="margin-top:16px">
+          <label>Email</label>
+          <input type="email" class="form-input" placeholder="your@email.com" />
+        </div>
+        <div class="form-group">
+          <label>Phone (Optional)</label>
+          <input type="tel" class="form-input" placeholder="+211 920 000 000" />
+        </div>
+        <div class="form-group">
+          <label>Subject</label>
+          <select class="form-select">
+            <option>Admissions Enquiry</option>
+            <option>Fee & Financial Aid</option>
+            <option>Academic Matter</option>
+            <option>Events & Activities</option>
+            <option>Staff & Employment</option>
+            <option>General Enquiry</option>
+            <option>Complaint / Feedback</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Message</label>
+          <textarea class="form-input" rows="5" placeholder="How can we help you?"></textarea>
+        </div>
+        <button class="btn btn-primary" style="width:100%;padding:12px;font-size:14px;justify-content:center;" onclick="this.textContent='✓ Message Sent! We\'ll respond shortly.';this.style.background='#3ecf8e';">Send Message →</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BANNER -->
+<section id="cta-banner">
+  <div class="cta-glow"></div>
+  <div class="container" style="position:relative;z-index:1;">
+    <h2 class="reveal">Begin Your <em style="color:var(--accent2);font-style:italic;">Downey</em> Journey</h2>
+    <p class="reveal reveal-delay-1">Join a community of thinkers, creators, athletes, and leaders. Applications for 2026 are now open — take the first step today.</p>
+    <div class="cta-actions reveal reveal-delay-2">
+      <a href="#admissions" class="btn btn-primary" style="font-size:15px;padding:12px 28px;">Apply for Admission →</a>
+      <a href="#" class="btn btn-gold" style="font-size:15px;padding:12px 28px;">Download Prospectus</a>
+      <a href="#contact" class="btn btn-ghost" style="font-size:15px;padding:12px 28px;">Contact Admissions</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px;">
+          <div class="logo-mark" style="width:36px;height:36px;font-size:18px;">D</div>
+          <div>
+            <div style="font-size:14px;font-weight:500;">Downey Collage</div>
+            <div style="font-size:12px;color:var(--muted);">Secondary School</div>
+          </div>
+        </div>
+        <p>Nurturing excellence, character, and community since 2018. Serving Ibba County and Western Equatoria, shaping the leaders of South Sudan.</p>
+        <div style="margin-top:16px;display:flex;gap:8px;flex-wrap:wrap;">
+          <span class="dept-tag" style="font-size:11px;">✓ MoE South Sudan Accredited</span>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>School</h4>
+        <ul>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#academics">Academics</a></li>
+          <li><a href="#staff">Our Staff</a></li>
+          <li><a href="#activities">Activities</a></li>
+          <li><a href="#gallery">School Gallery</a></li>
+          <li><a href="#">School History</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Admissions</h4>
+        <ul>
+          <li><a href="#admissions">How to Apply</a></li>
+          <li><a href="#admissions">Fee Structure</a></li>
+          <li><a href="#">Scholarships</a></li>
+          <li><a href="#">Open Days</a></li>
+          <li><a href="#contact">Contact School</a></li>
+          <li><a href="#">FAQs</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Community</h4>
+        <ul>
+          <li><a href="#resources">Parent Portal</a></li>
+          <li><a href="#news">News & Events</a></li>
+          <li><a href="#">Alumni Network</a></li>
+          <li><a href="#">Donate / Sponsor</a></li>
+          <li><a href="#">Safeguarding Policy</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Downey Collage Secondary School. All rights reserved. | Ibba County, Western Equatoria, South Sudan | Est. 2018</p>
+      <div class="footer-socials">
+        <a href="#" class="social-link" title="Facebook">f</a>
+        <a href="#" class="social-link" title="Twitter/X">𝕏</a>
+        <a href="#" class="social-link" title="Instagram">IG</a>
+        <a href="#" class="social-link" title="YouTube">▷</a>
+        <a href="#" class="social-link" title="LinkedIn">in</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+// ── Scroll animations ──
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      revealObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.12, rootMargin:'0px 0px -60px 0px' });
+
+document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+// ── Timeline items ──
+const tlObserver = new IntersectionObserver((entries) => {
+  entries.forEach((entry, i) => {
+    if(entry.isIntersecting) {
+      setTimeout(() => entry.target.classList.add('visible'), i * 120);
+      tlObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.1 });
+document.querySelectorAll('.timeline-item').forEach(el => tlObserver.observe(el));
+
+// ── Progress bar animation ──
+const progObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting) {
+      document.querySelectorAll('.prog-fill').forEach(bar => {
+        const w = bar.getAttribute('data-width');
+        bar.style.width = w + '%';
+      });
+      progObserver.disconnect();
+    }
+  });
+}, { threshold: 0.5 });
+const progSection = document.querySelector('.progress-bars');
+if(progSection) progObserver.observe(progSection);
+
+// ── Nav scroll behavior ──
+let lastScroll = 0;
+const navbar = document.getElementById('navbar');
+window.addEventListener('scroll', () => {
+  const curr = window.scrollY;
+  if(curr > 100) {
+    navbar.style.background = 'rgba(8,9,10,0.97)';
+  } else {
+    navbar.style.background = 'rgba(8,9,10,0.85)';
+  }
+  lastScroll = curr;
+});
+
+// ── Staggered department cards ──
+const deptObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting) {
+      const cards = entry.target.querySelectorAll('.dept-card');
+      cards.forEach((card, i) => {
+        card.style.opacity = '0';
+        card.style.transform = 'translateY(20px)';
+        card.style.transition = `opacity 0.5s ease ${i * 0.07}s, transform 0.5s ease ${i * 0.07}s`;
+        setTimeout(() => {
+          card.style.opacity = '1';
+          card.style.transform = 'translateY(0)';
+        }, 50 + i * 70);
+      });
+      deptObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.1 });
+const acGrid = document.querySelector('.academics-grid');
+if(acGrid) deptObserver.observe(acGrid);
+
+// ── Staggered staff cards ──
+const staffObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting) {
+      const cards = entry.target.querySelectorAll('.staff-card');
+      cards.forEach((card, i) => {
+        card.style.opacity = '0';
+        card.style.transform = 'translateY(16px)';
+        card.style.transition = `opacity 0.4s ease ${i * 0.08}s, transform 0.4s ease ${i * 0.08}s`;
+        setTimeout(() => {
+          card.style.opacity = '1';
+          card.style.transform = 'translateY(0)';
+        }, 50 + i * 80);
+      });
+      staffObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.1 });
+const sGrid = document.querySelector('.staff-grid');
+if(sGrid) staffObserver.observe(sGrid);
+
+// ── Smooth active nav highlight ──
+const sections = document.querySelectorAll('section[id]');
+const navAs = document.querySelectorAll('.nav-links a');
+const secObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting) {
+      navAs.forEach(a => {
+        a.style.color = '';
+        if(a.getAttribute('href') === '#'+entry.target.id) {
+          a.style.color = 'var(--text)';
+        }
+      });
+    }
+  });
+}, { threshold: 0.4 });
+sections.forEach(s => secObserver.observe(s));
+
+// ── Theme toggle ──
+const html = document.documentElement;
+const toggleBtn = document.getElementById('themeToggle');
+
+// Restore saved preference
+const saved = localStorage.getItem('dcss-theme');
+if(saved === 'light') html.classList.add('light');
+
+toggleBtn.addEventListener('click', () => {
+  html.classList.toggle('light');
+  const isLight = html.classList.contains('light');
+  localStorage.setItem('dcss-theme', isLight ? 'light' : 'dark');
+});
+</script>
 </body>
 </html>
